@@ -1,0 +1,29 @@
+PROCEDURE Dot-prod(v1,v2: array_name : ARRAY_OF INTEGER[], n:INTEGER, prod);
+VAR
+    i,prod: INTEGER;
+BEGIN
+    prod:=0;
+    FOR i FROM   TO maxn-1 STEP 1  DO
+        prod:=prod+v1[i]*v2[i];
+    END_FOR
+    IF (prod:=0) THEN
+        write("the two vectors are orthogonal");
+    END_IF
+END
+ALGORITHM prod
+VAR
+    v1, v2 :ARRAY_OF INTEGER;
+    i,n: INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        read(v1,v2);
+    END_FOR
+    dot-prod(v1,v2,n,prod);
+    write(prod);
+    IF (prod:=0) THEN
+        write("v1 and v2 are orthogonal.")
+        ELSE
+            write("they are not.")
+        END_IF
+    END_IF
+END

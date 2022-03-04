@@ -1,0 +1,13 @@
+FUNCTION dot-product(v1 , v2) :ARRAY_OF INTEGER
+VAR
+    i, n, prod:INTEGER;
+BEGIN
+    prod=0;
+    FOR i FROM 0 TO n - 1 STEP 1  DO
+        prod += v1[i] * v2[i]
+    END_FOR
+    IF (prod=0) THEN
+        write("the vectors are orthogonal");
+    END_IF
+    RETURN prod;
+END

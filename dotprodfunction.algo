@@ -1,4 +1,4 @@
-FUNCTION dot-product(v1 , v2) :ARRAY_OF INTEGER
+FUNCTION dot-product(v1 , v2) : return prod;
 VAR
     i, n, prod:INTEGER;
 BEGIN
@@ -10,4 +10,22 @@ BEGIN
         write("the vectors are orthogonal");
     END_IF
     RETURN prod;
+END
+ALGORITHM prod
+VAR
+    v1, v2 :ARRAY_OF INTEGER;
+    i,n: INTEGER;
+    prod: INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        read(v1,v2);
+    END_FOR
+    prod:=dot-prod(v1,v2,n);
+    write(prod);
+    IF (prod:=0) THEN
+        write("v1 and v2 are orthogonal.")
+        ELSE
+            write("they are not.")
+        END_IF
+    END_IF
 END
